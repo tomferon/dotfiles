@@ -129,6 +129,4 @@ if ! [[ "$PROMPT_COMMAND" =~ _direnv_hook ]]; then
 	  PROMPT_COMMAND="_direnv_hook;$PROMPT_COMMAND"
 fi
 
-alias dr="direnv reload"
-
 export EDITOR=vim
