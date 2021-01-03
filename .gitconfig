@@ -1,0 +1,15 @@
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	ci = commit
+	pf = push --force-with-lease
+	pu = push
+	fe = fetch --prune
+[user]
+	name = Tom Feron
+	email = tho.feron@gmail.com
+[core]
+	excludesfile = /home/thoferon/.gitignore_global
+[push]
+	default = current
