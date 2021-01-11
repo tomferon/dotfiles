@@ -13,3 +13,5 @@
 	excludesfile = /home/thoferon/.gitignore_global
 [push]
 	default = current
+[rerere]
+	enabled = true
