@@ -11,7 +11,16 @@
 	email = tho.feron@gmail.com
 [core]
 	excludesfile = /home/thoferon/.gitignore_global
+	editor = code-insiders --wait
 [push]
 	default = current
 [rerere]
 	enabled = true
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	editor = code-insiders --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code-insiders --wait $MERGED
