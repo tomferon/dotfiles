@@ -1,0 +1,11 @@
+# If direnv is not install but Nix is, install direnv with Nix.
+if [ ! -x "$(which direnv)" ] && [ -x "$(which nix-env)" ]; then
+    nix-env -iA nixos.direnv ||
+    nix-env -iA nixpkgs.direnv ||
+    nix profile install nixpkgs#direnv ||
+        true # Or give up.
+fi
+
+if [ -x "$(which direnv)" ]; then
+    eval "$(direnv hook bash)"
+fi
