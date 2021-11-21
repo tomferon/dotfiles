@@ -8,6 +8,6 @@ for f in $(ls -a .); do
   elif [ -d "$f" ]; then
     mkdir -p "$HOME/$f"
   else
-    cp "$f" "$HOME/$f"
+    cp -r "$f" "$HOME/$f"
   fi
 done
