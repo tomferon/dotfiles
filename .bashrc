@@ -29,17 +29,12 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# Load Nix.
-if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
-    . "$HOME/.nix-profile/etc/profile.d/nix.sh"
-
-    # Install Starship for prompt.
-    if [ ! -x "$(which starship)" ]; then
-        nix-env -iA nixpkgs.starship ||
-            nix-env -iA nixos.starship ||
-            nix profile install nixpkgs#starship ||
-            true # Give up if it can't be installed.
-    fi
+# Install Starship for prompt.
+if [ ! -x "$(which starship)" ]; then
+    nix-env -iA nixpkgs.starship ||
+        nix-env -iA nixos.starship ||
+        nix profile install 'nixpkgs#starship' ||
+        true # Give up if it can't be installed.
 fi
 
 # Set the prompt.

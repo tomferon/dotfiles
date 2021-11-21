@@ -11,16 +11,20 @@
 	email = tho.feron@gmail.com
 [core]
 	excludesfile = /home/thoferon/.gitignore_global
-	editor = code --wait
 [push]
 	default = current
 [rerere]
 	enabled = true
-[diff]
-	tool = vscode
-[difftool "vscode"]
-	editor = code --wait --diff $LOCAL $REMOTE
-[merge]
-	tool = vscode
-[mergetool "vscode"]
-	cmd = code --wait $MERGED
+[pager]
+	diff = delta
+	show = delta
+	log = delta
+	blame = delta
+	reflog = delta
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+[delta]
+	side-by-side = true
+[delta "interactive"]
+[init]
+	defaultBranch = main
