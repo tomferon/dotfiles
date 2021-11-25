@@ -10,7 +10,7 @@
 	name = Tom Feron
 	email = tho.feron@gmail.com
 [core]
-	excludesfile = /home/thoferon/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [push]
 	default = current
 [rerere]
@@ -28,3 +28,10 @@
 [delta "interactive"]
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	defaultKeyCommand = ssh-add -L
+	allowedSignersFile = ~/.gitsigners
+[commit]
+	gpgsign = true

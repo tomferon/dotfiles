@@ -111,3 +111,15 @@ fi
 if [ -f $HOME/.aliases ]; then
   source $HOME/.aliases
 fi
+
+if [ -e "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+if [ "$(ps -u $USER | grep ssh-agent | wc -l)" -eq "0" ]; then
+  ssh-agent -s > ~/.ssh/ssh-agent
+  source ~/.ssh/ssh-agent > /dev/null
+  ssh-add ~/.ssh/id_rsa
+else
+  source ~/.ssh/ssh-agent > /dev/null
+fi
