@@ -76,6 +76,7 @@ plugins=(
   colored-man-pages
   colorize
   command-not-found
+  direnv
   docker
   git
   github
@@ -116,10 +117,18 @@ if [ -e "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-if [ "$(ps -u $USER | grep ssh-agent | wc -l)" -eq "0" ]; then
-  ssh-agent -s > ~/.ssh/ssh-agent
-  source ~/.ssh/ssh-agent > /dev/null
-  ssh-add ~/.ssh/id_rsa
-else
-  source ~/.ssh/ssh-agent > /dev/null
+if [ -f /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
+    . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+fi
+
+which direnv > /dev/null
+if [ $? -eq 0 ]; then
+    eval "$(direnv hook zsh)"
+fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

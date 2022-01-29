@@ -8,10 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
-    . "$HOME/.nix-profile/etc/profile.d/nix.sh"
-fi
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -29,3 +25,6 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
