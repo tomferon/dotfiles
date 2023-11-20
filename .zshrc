@@ -91,6 +91,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -130,8 +133,6 @@ which direnv > /dev/null
 if [ $? -eq 0 ]; then
     eval "$(direnv hook zsh)"
 fi
-
-export FZF_DEFAULT_COMMAND="rg --files --hidden"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
