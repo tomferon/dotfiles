@@ -78,6 +78,7 @@ plugins=(
   command-not-found
   direnv
   docker
+  fzf
   git
   github
   jump
@@ -129,6 +130,8 @@ which direnv > /dev/null
 if [ $? -eq 0 ]; then
     eval "$(direnv hook zsh)"
 fi
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

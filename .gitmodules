@@ -8,7 +8,7 @@
 	path = .zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "/Users/tomferon/.zsh/themes/powerlevel9k"]
-	path = /Users/tomferon/.zsh/themes/powerlevel9k
+	path = .zsh/themes/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule "fonts"]
 	path = fonts
