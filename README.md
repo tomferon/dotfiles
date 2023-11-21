@@ -14,3 +14,16 @@ The font can be set to "Fira Code Nerd Font", Regular (+ enable "Use ligatures")
 iTerm2's color presets is set to catpuccin by importing `~/utils/catppuccin-iterm/colors/...-frappe...`.
 
 In Profiles > Keys > General, Left Option Key should be set to Esc+, otherwise M-1 sends ¡, M-2 ™, etc.
+
+# Nix packages
+
+* bat
+* btop
+* cmake
+* delta
+* direnv
+* fd
+* fzf
+* neovim
+* ripgrep
+* tmux
