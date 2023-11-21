@@ -15,6 +15,7 @@ vim.g.mapleader = " " -- Set `mapleader` before lazy so your mappings are correc
 
 local plugins = {
   {
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   }
@@ -27,3 +28,5 @@ require("lazy").setup(plugins, {
 vim.opt.number = true
 vim.opt.tabstop = 2
 vim.opt.undofile = true
+
+vim.cmd.colorscheme "catppuccin-frappe"

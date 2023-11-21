@@ -11,5 +11,11 @@
 	path = .zsh/themes/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule "fonts"]
-	path = fonts
+	path = utils/fonts
 	url = https://github.com/powerline/fonts.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "utils/catppuccin-iterm"]
+	path = utils/catppuccin-iterm
+	url = https://github.com/catppuccin/iterm
