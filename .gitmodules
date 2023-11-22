@@ -19,3 +19,6 @@
 [submodule "utils/catppuccin-iterm"]
 	path = utils/catppuccin-iterm
 	url = https://github.com/catppuccin/iterm
+[submodule "utils/catppuccin-bat"]
+	path = utils/catppuccin-bat
+	url = https://github.com/catppuccin/bat.git

@@ -27,6 +27,8 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     "vim-airline/vim-airline",
     "ntpeters/vim-better-whitespace",
+    "folke/which-key.nvim",
+    "neovim/nvim-lspconfig",
   }
 }
 
@@ -77,6 +79,11 @@ require("telescope").setup {
   },
 }
 
+require("which-key").setup {
+}
+
+require("lspconfig").rnix.setup {}
+
 -- Need to be before the other options.
 vim.opt.compatible = false
 
@@ -107,6 +114,8 @@ vim.opt.wildignore = "*.jpg,*.png,*.o,*.pdf"
 
 vim.cmd.syntax "on"
 vim.cmd.colorscheme "catppuccin-frappe"
+
+vim.opt.timeoutlen = 500
 
 --vim.g.airline_theme = "catppuccin"
 vim.cmd([[

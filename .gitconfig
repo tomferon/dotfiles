@@ -1,44 +1,52 @@
 [alias]
-	co = checkout
-	st = status
-	br = branch
-	ci = commit
-	pf = push --force-with-lease
-	pu = push
-	fe = fetch --prune
+  co = checkout
+  st = status
+  br = branch
+  ci = commit
+  pf = push --force-with-lease
+  pu = push
+  fe = fetch --prune
 [user]
-	name = Tom Feron
-	email = tho.feron@gmail.com
+  name = Tom Feron
+  email = tho.feron@gmail.com
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [push]
-	default = current
+  default = current
 [rerere]
-	enabled = true
+  enabled = true
 [pager]
-	diff = delta
-	show = delta
-	log = delta
-	blame = delta
-	reflog = delta
+  diff = delta
+  show = delta
+  log = delta
+  blame = delta
+  reflog = delta
 [interactive]
-	diffFilter = delta --color-only --features=interactive
+  diffFilter = delta --color-only --features=interactive
+[diff]
+  colorMoved = default
 [delta]
-	side-by-side = true
-[delta "interactive"]
+  side-by-side = true
+  features = theme
+[delta "theme"]
+  dark = true
+  minus-style = syntax "#835d6a"
+  minus-emph-style = syntax "#af5d6a"
+  plus-style = syntax "#668082"
+  plus-emph-style = syntax "#669982"
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [user]
- 	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD1VqPyvuxpCESodkWU/du2sRZ3JBWyIPJPjbPGG17570JeRUS8627l6r2wZPN4+lJES1FcRXOxn0IGT3f26A2Z1PVCtyVle6ZIYBDftIHLeTPY0pAG6xc50Ngn03FwiFl9Xn2LXvGg9Zrs0ed0GPeAr88hNzi6lOg8Er3bnNi4/hZK0DPz2lIpzXU50ET7lZl565VYPEBYVHZ1XzrRr4wDRTd0sj2HcKALHB1JJaREZZAw+eqQJNNPCMY0QbgBCUrUd/oOmJ/US+ttwJ+6C5N9AdDJAeh0mxlPKdDAZqIzFehRGL2v4JbCij2MkDO6FO1PqxV60/3HGtUuq73MbGWREi8wvjRKtjXxjZTxBY2owb3Ttf9aTWrEqV4w/lT1QFY2ZKNPCswqwDAr4aeiPwfRvpz4x7ve5Hq4S1OHMyIQweKu+x8Tuv0VjdoaxBi0lbzcZMsXmtHQNQ5KuU1JsswnceQ6NgicN+AyGIPvZowvhqquC6Om/kUMf6VpBdq6BRE=
+   signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD1VqPyvuxpCESodkWU/du2sRZ3JBWyIPJPjbPGG17570JeRUS8627l6r2wZPN4+lJES1FcRXOxn0IGT3f26A2Z1PVCtyVle6ZIYBDftIHLeTPY0pAG6xc50Ngn03FwiFl9Xn2LXvGg9Zrs0ed0GPeAr88hNzi6lOg8Er3bnNi4/hZK0DPz2lIpzXU50ET7lZl565VYPEBYVHZ1XzrRr4wDRTd0sj2HcKALHB1JJaREZZAw+eqQJNNPCMY0QbgBCUrUd/oOmJ/US+ttwJ+6C5N9AdDJAeh0mxlPKdDAZqIzFehRGL2v4JbCij2MkDO6FO1PqxV60/3HGtUuq73MbGWREi8wvjRKtjXxjZTxBY2owb3Ttf9aTWrEqV4w/lT1QFY2ZKNPCswqwDAr4aeiPwfRvpz4x7ve5Hq4S1OHMyIQweKu+x8Tuv0VjdoaxBi0lbzcZMsXmtHQNQ5KuU1JsswnceQ6NgicN+AyGIPvZowvhqquC6Om/kUMf6VpBdq6BRE=
 [gpg]
-	format = ssh
+  format = ssh
 [gpg "ssh"]
-	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-	allowedSignersFile = ~/.gitsigners
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  allowedSignersFile = ~/.gitsigners
 [commit]
-	gpgsign = true
+  gpgsign = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

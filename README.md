@@ -15,6 +15,10 @@ iTerm2's color presets is set to catpuccin by importing `~/utils/catppuccin-iter
 
 In Profiles > Keys > General, Left Option Key should be set to Esc+, otherwise M-1 sends ¡, M-2 ™, etc.
 
+# bat & delta
+
+`bat` might need the cache to be rebuilt to pick up the theme by running `bat cache --build`.
+
 # Nix packages
 
 * bat
