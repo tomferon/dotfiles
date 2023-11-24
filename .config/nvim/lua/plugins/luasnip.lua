@@ -30,6 +30,4 @@ vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/plugins
 ls.snippets = {
   all = {
   },
-  lua = {
-  },
 }
