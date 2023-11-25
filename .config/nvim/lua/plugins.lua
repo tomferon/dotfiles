@@ -24,5 +24,13 @@ return {
       build = "make install_jsregexp"
     },
     "saadparwaiz1/cmp_luasnip",
+    "tpope/vim-sleuth",
+    "tpope/vim-fugitive",
+    "airblade/vim-gitgutter",
+    { "tpope/vim-surround",
+      dependencies = {
+        "tpope/vim-repeat"
+      },
+    }
   }
 }
