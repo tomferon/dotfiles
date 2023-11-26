@@ -1,0 +1,9 @@
+# Make fd, ripgrep and fzf skip over some directories
+Applications
+Library
+Movies
+Music
+Pictures
+.zsh
+.cache
+.git
