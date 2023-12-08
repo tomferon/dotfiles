@@ -34,4 +34,5 @@ return {
     },
   },
   "numToStr/Comment.nvim",
+  "mbbill/undotree",
 }

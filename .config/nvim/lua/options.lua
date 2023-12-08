@@ -7,6 +7,7 @@ vim.opt.filetype.indent = "on"
 
 vim.opt.number = true
 vim.opt.numberwidth = 4
+vim.opt.relativenumber = true
 
 vim.opt.undofile = true
 

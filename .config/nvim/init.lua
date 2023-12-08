@@ -30,6 +30,7 @@ require("lsp")
 require("which-key").setup {}
 
 require("options")
+require("keymaps")
 
 --vim.g.airline_theme = "catppuccin"
 vim.cmd([[
