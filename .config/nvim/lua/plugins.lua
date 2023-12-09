@@ -35,4 +35,8 @@ return {
   },
   "numToStr/Comment.nvim",
   "mbbill/undotree",
+  {
+    "olimorris/persisted.nvim",
+    config = true
+  },
 }

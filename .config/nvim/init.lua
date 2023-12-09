@@ -24,6 +24,7 @@ require("plugins.telescope")
 require("plugins.cmp")
 require("plugins.luasnip")
 require("plugins.comment")
+require("plugins.persisted")
 
 require("lsp")
 
