@@ -19,17 +19,22 @@ require("lazy").setup(plugins, {
   lazy = true
 })
 
+require("options")
+
 require("plugins.nvim-treesitter")
 require("plugins.telescope")
 require("plugins.cmp")
 require("plugins.luasnip")
 require("plugins.comment")
+require("plugins.noice")
+require("plugins.notify")
+require("plugins.mason")
 
 require("lsp")
 
 require("which-key").setup {}
+require("gitsigns").setup {}
 
-require("options")
 require("keymaps")
 
 --vim.g.airline_theme = "catppuccin"

@@ -17,3 +17,4 @@ nmap("z>", "Increment the number of fold columns", function()
 end)
 
 nmap("<leader>ut", "Show undo tree", vim.cmd.UndotreeToggle)
+nmap("<leader>tr", "Show Trouble panel", vim.cmd.TroubleToggle)

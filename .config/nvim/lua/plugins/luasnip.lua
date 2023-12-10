@@ -25,7 +25,7 @@ vim.keymap.set("i", "<c-l>", function()
   end
 end, { silent = true })
 
-vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/plugins/luasnip.lua<cr>")
+vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/plugins/luasnip.lua<cr>", { desc = "Reload snippets from LuaSnip config" })
 
 ls.snippets = {
   all = {

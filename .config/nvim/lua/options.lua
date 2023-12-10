@@ -6,7 +6,7 @@ vim.opt.filetype.plugin = "on"
 vim.opt.filetype.indent = "on"
 
 vim.opt.number = true
-vim.opt.numberwidth = 4
+vim.opt.numberwidth = 2
 vim.opt.relativenumber = true
 
 vim.opt.undofile = true
@@ -29,5 +29,9 @@ vim.opt.wildignore = "*.jpg,*.png,*.o,*.pdf"
 
 vim.cmd.syntax "on"
 vim.cmd.colorscheme "catppuccin-frappe"
+vim.o.termguicolors = true
 
 vim.opt.timeoutlen = 500
+
+-- Prevent errors from LSP froh shifting the contents right by always showing the column.
+vim.opt.signcolumn = "yes"
