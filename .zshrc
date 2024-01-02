@@ -142,3 +142,4 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export BAT_THEME="Catppuccin-frappe"
+export SSH_AUTH_SOCK="$HOME/.ssh/1p-agent.sock"
