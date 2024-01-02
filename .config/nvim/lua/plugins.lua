@@ -62,5 +62,6 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     }
-  }
+  },
+  "nvim-neo-tree/neo-tree.nvim",
 }
