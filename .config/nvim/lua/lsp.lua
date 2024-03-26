@@ -4,7 +4,7 @@ local lsp_attach = function()
   local nmap = function(key, func)
     vim.keymap.set("n", key, func, { buffer = 0 })
   end
-  nmap("K", vim.lsp.buf.hover)
+  nmap("sd", vim.lsp.buf.hover)
   nmap("gD", vim.lsp.buf.declaration)
   nmap("gd", vim.lsp.buf.definition) -- <C-t> to jump back.
   nmap("gr", vim.lsp.buf.references)

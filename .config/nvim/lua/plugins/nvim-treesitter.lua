@@ -38,3 +38,9 @@ require("nvim-treesitter.configs").setup {
     enable = true,
   },
 }
+
+require("treesitter-context").setup({
+  enable = true,
+  max_lines = 5,
+  min_window_height = 15,
+})

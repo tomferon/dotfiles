@@ -10,6 +10,7 @@ return {
     },
   },
   "nvim-treesitter/nvim-treesitter",
+  "nvim-treesitter/nvim-treesitter-context",
   "vim-airline/vim-airline",
   "ntpeters/vim-better-whitespace",
   "folke/which-key.nvim",
@@ -23,6 +24,7 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-nvim-lsp",
+      "onsails/lspkind.nvim",
     },
   },
   {
@@ -41,7 +43,15 @@ return {
   },
   "numToStr/Comment.nvim",
   "mbbill/undotree",
-  "Exafunction/codeium.vim",
+  {
+    "Exafunction/codeium.nvim",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup({})
+    end,
+  },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
@@ -64,4 +74,26 @@ return {
     }
   },
   "nvim-neo-tree/neo-tree.nvim",
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    lazy = false, -- specify lazy = false because some lazy.nvim distributions set lazy = true by default
+    -- tag = "*",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                notes = "~/notes",
+              },
+            },
+          },
+        },
+      }
+    end,
+  },
 }
