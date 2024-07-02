@@ -29,6 +29,7 @@ require("plugins.comment")
 require("plugins.noice")
 require("plugins.notify")
 require("plugins.mason")
+require("plugins.dap")
 
 require("lsp")
 

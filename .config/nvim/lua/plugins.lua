@@ -16,6 +16,7 @@ return {
   "folke/which-key.nvim",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
+  "jay-babu/mason-nvim-dap.nvim",
   "neovim/nvim-lspconfig",
   {
     "hrsh7th/nvim-cmp",
@@ -95,5 +96,13 @@ return {
         },
       }
     end,
+  },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "nvim-neotest/nvim-nio",
+      "theHamsta/nvim-dap-virtual-text",
+    },
   },
 }
