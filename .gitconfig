@@ -38,13 +38,14 @@
 [init]
   defaultBranch = main
 [user]
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRQaocoynSackpsZXgxPF4o9E0Uhr0yTaEFbKExISZK
+  signingkey = ~/.ssh/id_ed25519.pub
 [gpg]
   format = ssh
 [gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
   allowedSignersFile = ~/.gitsigners
 [commit]
+  gpgsign = true
+[tag]
   gpgsign = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
