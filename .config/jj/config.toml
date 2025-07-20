@@ -1,0 +1,9 @@
+[ui]
+default-command = "log"
+
+[user]
+email = "tho.feron@gmail.com"
+name = "Tom Feron"
+
+[core]
+excludesfile = "~/.gitignore_global"

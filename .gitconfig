@@ -11,6 +11,7 @@
   email = tho.feron@gmail.com
 [core]
   excludesfile = ~/.gitignore_global
+  pager = delta
 [push]
   default = current
 [rerere]
@@ -25,10 +26,13 @@
   diffFilter = delta --color-only --features=interactive
   features = theme
 [diff]
-  colorMoved = default
+  #colorMoved = default
+  pager = delta
 [delta]
   side-by-side = true
   features = theme
+  navigate = true
+  dark = true
 [delta "theme"]
   dark = true
   minus-style = syntax "#835d6a"
@@ -44,11 +48,17 @@
 [gpg "ssh"]
   allowedSignersFile = ~/.gitsigners
 [commit]
-  gpgsign = true
+  ; gpgsign = true
 [tag]
-  gpgsign = true
+  ; gpgsign = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[color]
+  status = always
+  diff = always
+  ui = auto
+[merge]
+  conflictstyle = zdiff3
