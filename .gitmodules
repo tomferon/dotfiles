@@ -22,3 +22,6 @@
 [submodule "utils/catppuccin-bat"]
 	path = utils/catppuccin-bat
 	url = https://github.com/catppuccin/bat.git
+[submodule "/Users/tomferon/.zsh/themes/powerlevel10k"]
+	path = /Users/tomferon/.zsh/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
