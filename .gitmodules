@@ -7,9 +7,6 @@
 [submodule ".zsh/plugins/zsh-syntax-highlighting"]
 	path = .zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "/Users/tomferon/.zsh/themes/powerlevel9k"]
-	path = .zsh/themes/powerlevel9k
-	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule "fonts"]
 	path = utils/fonts
 	url = https://github.com/powerline/fonts.git
@@ -22,6 +19,6 @@
 [submodule "utils/catppuccin-bat"]
 	path = utils/catppuccin-bat
 	url = https://github.com/catppuccin/bat.git
-[submodule "/Users/tomferon/.zsh/themes/powerlevel10k"]
-	path = /Users/tomferon/.zsh/themes/powerlevel10k
+[submodule ".zsh/themes/powerlevel10k"]
+	path = .zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
